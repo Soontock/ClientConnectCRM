@@ -4,11 +4,11 @@
         @method('PUT')
 
         <label for="customer_id">Customer:</label>
-        <select name="customer_id" required>
+        <select name="customer_id" required disabled>
             <option value="" disabled>Select Customer</option>
             @foreach ($customers as $customer)
                 <option value="{{ $customer->id }}" {{ $customer->id == $interactions->customer_id ? 'selected' : '' }}>
-                    {{ $customer->name }}
+                    {{ $customer->name }} 
                 </option>
             @endforeach
         </select>
@@ -55,7 +55,7 @@
 
      form {
          background-color: var(--background-color);
-         color: var(--text-color);
+         color: black;
          padding: 20px;
          border-radius: 8px;
          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

@@ -32,7 +32,11 @@
 
             <div class="form-group">
                 <label for="userType">Role</label>
-                <input type="text" class="form-control" id="userType" name="userType" value="{{ old('userType') }}" required>
+                <select name="userType" class="userType-select ml-2">
+                    <option value="admin" {{ request()->input('userType') == 'admin' ? 'selected' : '' }}>Admin</option>
+                    <option value="user" {{ request()->input('userType') == 'user' ? 'selected' : '' }}>User</option>
+                    <option value="support" {{ request()->input('userType') == 'support' ? 'selected' : '' }}>Support</option>
+                </select>     
             </div>
 
             <button type="submit" class="btn btn-primary">Create User</button>
@@ -41,7 +45,6 @@
     </div>
 </x-app-layout>
 
-<!-- Separate CSS section -->
 <style>
     :root {
         --background-color: #f8f9fa;
@@ -73,6 +76,16 @@
         background-color: var(--background-color);
         color: var(--text-color);
         font-family: Arial, sans-serif;
+    }
+
+    .userType-select{
+            background-color: var(--input-background);
+            color: var(--input-text);
+            padding: 0.5rem 1rem; 
+            border-radius: 0.375rem; 
+            border: 1px solid var(--input-border);
+            margin-left: 0.5rem;
+            transition: background-color 0.3s, transform 0.3s; 
     }
 
     .container {
