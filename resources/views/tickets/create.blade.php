@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="ticket-container">
-        <h1  class="text-2xl font-semibold mb-4">Create New Ticket</h1>
+        <h1 class="text-2xl font-semibold mb-4">Create New Ticket</h1>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -13,12 +13,13 @@
         @endif
 
         <form action="{{ route('tickets.store') }}" method="POST">
-            @csrf  
-       
+            @csrf
+
             <div class="form-group">
                 <label for="email">Customer Email</label>
-                <input type="text" class="ticket-control" id="email" name="email" value="{{ old('email') }}" required>
-          
+                <input type="text" class="ticket-control" id="email" name="email" value="{{ old('email') }}"
+                    required>
+
                 <input type="hidden" id="customer_id" name="customer_id">
                 Customer Name: <input class="customerNameBox" type="text" id="name" name="name" disabled>
                 <small id="emailError" class="text-red-500 hidden">Customer not found.</small>
@@ -26,12 +27,14 @@
 
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" class="ticket-control" id="title" name="title" value="{{ old('title') }}" required>
+                <input type="text" class="ticket-control" id="title" name="title" value="{{ old('title') }}"
+                    required>
             </div>
 
             <div class="form-group">
                 <label for="description">Description</label>
-                <input type="text" class="ticket-control" id="description" name="description" value="{{ old('description') }}" required>
+                <input type="text" class="ticket-control" id="description" name="description"
+                    value="{{ old('description') }}" required>
             </div>
 
             <div class="form-group">
@@ -39,7 +42,8 @@
                 <select class="ticket-control" id="status" name="status" required>
                     <option value="" disabled selected>Select Status</option>
                     <option value="open" {{ old('status') == 'open' ? 'selected' : '' }}>Open</option>
-                    <option value="inProgress" {{ old('status') == 'inProgress' ? 'selected' : '' }}>In Progress</option>
+                    <option value="inProgress" {{ old('status') == 'inProgress' ? 'selected' : '' }}>In Progress
+                    </option>
                     <option value="resolved" {{ old('status') == 'resolved' ? 'selected' : '' }}>Resolved</option>
                     <option value="closed" {{ old('status') == 'closed' ? 'selected' : '' }}>Closed</option>
                 </select>

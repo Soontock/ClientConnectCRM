@@ -51,7 +51,7 @@ class DashboardController extends Controller
         $recentInteractions = Interaction::orderBy('created_at', 'desc')->take(4)->get();
         $pendingFollowUps = Ticket::whereIn('status', ['open', 'inProgress'])->count();
         $activeTickets = Ticket::whereIn('status', ['open', 'inProgress'])->get();
-        
+
         $priorityCounts = Ticket::whereIn('status', ['open', 'inProgress'])
             ->select('priority', \DB::raw('count(*) as count'))
             ->groupBy('priority')

@@ -34,13 +34,13 @@
     }
 
     .interaction-container {
-        @apply  text-black p-6 rounded-lg shadow-md max-w-xl mx-auto mt-5;
+        @apply text-black p-6 rounded-lg shadow-md max-w-xl mx-auto mt-5;
         background-color: var(--background-color);
         color: var(--text-color);
     }
 
     .interaction-container input {
-        @apply  text-black 
+        @apply text-black;
     }
 
     .interaction-container select,
@@ -55,27 +55,27 @@
         @apply border-blue-500 outline-none;
     }
 
-    .interaction-container label{
+    .interaction-container label {
         @apply block mb-1 font-bold;
     }
 
     .customerIndexForm-container {
         @apply mb-5 flex justify-between items-center w-full;
     }
-    
-    .customer-container label{
+
+    .customer-container label {
         @apply block mb-1 font-bold;
     }
 
-    .customer-control{
+    .customer-control {
         @apply bg-white text-black border rounded-lg p-2 w-full transition-colors duration-300 ease-in-out;
         border-color: var(--input-border);
     }
 
-        .customer-control:focus {
-            @apply  outline-none;
-            border-color: var(--input-focus-border);
-        }
+    .customer-control:focus {
+        @apply outline-none;
+        border-color: var(--input-focus-border);
+    }
 
     .detailContainer {
         @apply max-w-xl mx-auto my-20 p-5 rounded-lg shadow-md;
@@ -91,17 +91,20 @@
         @apply mb-2;
     }
 
-    .table-user, .table-ticket, .table-interaction, .table-customer {
+    .table-user,
+    .table-ticket,
+    .table-interaction,
+    .table-customer {
         @apply min-w-full  bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700;
     }
 
-    .table-user th, 
-    .table-ticket th, 
-    .table-interaction th, 
-    .table-customer th, 
-    .table-user td, 
-    .table-ticket td, 
-    .table-interaction td, 
+    .table-user th,
+    .table-ticket th,
+    .table-interaction th,
+    .table-customer th,
+    .table-user td,
+    .table-ticket td,
+    .table-interaction td,
     .table-customer td {
         @apply px-4 py-2 border-b border-gray-300 text-center;
     }
@@ -122,30 +125,30 @@
         @apply bg-blue-500 text-white p-2 rounded-lg transition transform hover:scale-105;
     }
 
-    .status-select, 
+    .status-select,
     .priority-select,
     .userType-select {
         @apply bg-white text-black p-2 rounded-lg border border-gray-300 ml-2 transition-transform duration-300 ease-in-out;
     }
 
     @media (prefers-color-scheme: dark) {
-        .status-select, 
+        .status-select,
         .priority-select,
         .userType.select {
             @apply bg-gray-700 text-white border-gray-600;
         }
     }
 
-    .status-select:hover, 
+    .status-select:hover,
     .priority-select:hover {
         @apply bg-gray-600; /* Add custom hover background color */
     }
 
-    .editButton{
+    .editButton {
         @apply ml-3 text-yellow-500 hover:text-yellow-700;
     }
 
-    .deleteButton{
+    .deleteButton {
         @apply text-red-500 hover:text-red-700;
     }
 
@@ -167,12 +170,16 @@
 
     .create-control {
         @apply bg-white text-black border rounded-lg p-2 w-full transition-colors duration-300 ease-in-out;
-        border-color: var(--input-border); /* Use custom property for border color */
+        border-color: var(
+            --input-border
+        ); /* Use custom property for border color */
     }
 
     .create-control:focus {
         @apply outline-none;
-        border-color: var(--button-primary-bg); /* Use custom property for border color on focus */
+        border-color: var(
+            --button-primary-bg
+        ); /* Use custom property for border color on focus */
     }
 
     .alert-danger {
@@ -188,7 +195,7 @@
     }
 
     .ticket-container {
-        @apply p-5 rounded-lg w-4/5 mx-auto shadow-lg mt-3;
+        @apply p-5 rounded-lg w-2/5 mx-auto shadow-lg mt-3;
         background-color: var(--background-color);
         color: var(--text-color);
     }
@@ -229,7 +236,7 @@
     .report-container label {
         @apply block mb-1 font-bold;
     }
-    
+
     .report-container input[type="date"] {
         @apply p-2 mb-2 w-[calc(50%-10px)] mr-2 border border-gray-300 rounded-md;
     }
@@ -238,25 +245,25 @@
         @apply w-full p-2 border  rounded-lg  text-base transition-colors duration-300 ease-in-out;
         border: var(--input-border);
         background-color: white;
-        color:black;
+        color: black;
     }
-    
+
     .create-control:focus {
-        @apply  outline-none;
+        @apply outline-none;
         border: var(--input-border);
     }
-    
+
     .user-container {
-        @apply  p-5 rounded-lg w-3/5 mx-auto my-4 shadow-md;
+        @apply p-5 rounded-lg w-3/5 mx-auto my-4 shadow-md;
         background-color: var(--background-color);
         color: var(--text-color);
     }
-    
-    .user-container label{
+
+    .user-container label {
         @apply block mb-1 font-bold;
     }
 
-    .dashboardContainer{
+    .dashboardContainer {
         @apply p-5 rounded-lg w-4/6 mx-auto mt-5;
         color: var(--text-color);
     }
@@ -264,82 +271,79 @@
     .titleDashboard {
         @apply font-bold;
     }
-    
+
     .card-customer {
         @apply text-[60px];
     }
-    
+
     .ticketStatusChart {
         @apply bg-transparent border-2 border-black;
     }
-    
+
     .card {
         @apply bg-white text-black mb-5;
     }
-    
+
     .dashboardCard {
         @apply h-auto transition-all duration-300 min-w-[20%] mr-8;
     }
-    
+
     .dashboardCard:hover {
         @apply border-2 border-blue-500 shadow-[0_4px_15px_rgba(0,123,255,0.5)];
     }
-    
+
     .list-group-item {
         @apply border-b border-black text-[25px];
     }
-    
+
     .card-header {
         @apply bg-[rgb(122,122,160)] text-white text-[30px] border border-black border-b-0;
     }
-    
+
     .activeTicketTable {
         @apply w-[50px];
     }
-    
+
     .activeTicketTable th {
         @apply bg-[rgb(122,122,160)] text-white p-1 border border-black;
     }
-    
-    
+
     .activeTicketTable td {
         @apply h-[50px] align-middle border border-black p-1;
     }
-    
+
     .activeTicketTable tbody tr:hover {
         @apply bg-[rgba(255,255,255,0.2)];
     }
-    
+
     .row {
         @apply flex flex-wrap;
     }
-    
-    .editUser-control 
-   {
+
+    .editUser-control {
         @apply w-full p-2 border rounded-md  text-base transition-colors duration-300 ease-in-out;
         border: 1px solid var(--input-border);
         background-color: white;
         color: black;
     }
-    
-    .ticket-control{
+
+    .ticket-control {
         @apply w-full p-2 border rounded-md  text-base transition-colors duration-300 ease-in-out;
-            background-color: var(--input-background);
-            color: var(--input-text);
-            border: 1px solid var(--input-border);
-           
+        background-color: var(--input-background);
+        color: var(--input-text);
+        border: 1px solid var(--input-border);
     }
 
     .editUser-control:focus {
-        @apply  outline-none;
+        @apply outline-none;
         border-color: var(--input-focus-border);
     }
-    
-    .user-container label{
+
+    .user-container label {
         @apply block mb-1 font-bold;
     }
 
-    .ticketContainer label{
+    .ticketContainer label {
         @apply block mb-1 font-bold;
         color: var(--input-text);
     }

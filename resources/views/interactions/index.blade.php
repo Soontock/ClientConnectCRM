@@ -11,7 +11,8 @@
         <div class="flex justify-between items-center mb-4 w-full">
             <form action="{{ route('interactions.index') }}" method="GET" class="w-3/5">
                 <div class="flex">
-                    <input type="text" name="query" placeholder="Search by name..." class="search-input" value="{{ request()->input('query') }}">
+                    <input type="text" name="query" placeholder="Search by name..." class="search-input"
+                        value="{{ request()->input('query') }}">
 
                     <button type="submit" class="search-button">
                         Search
@@ -41,14 +42,17 @@
                 </thead>
                 <tbody>
                     @foreach ($interactions as $interaction)
-                        <tr  class="hover:bg-gray-50 dark:hover:bg-gray-700">
-                            <td >{{ $interaction->customer->name }}</td>
-                            <td >{{ $interaction->date_time }}</td>
+                        <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+                            <td>{{ $interaction->customer->name }}</td>
+                            <td>{{ $interaction->date_time }}</td>
                             <td>{{ $interaction->type }}</td>
                             <td class="notes-cell">{{ $interaction->notes }}</td>
                             <td>
-                                <a href="{{ route('interactions.edit', $interaction->id) }}" class="editButton ml-3">Edit</a>
-                                <form action="{{ route('interactions.destroy', $interaction->id) }}"  onsubmit="return confirm('Are you sure you want to delete this interaction?');" method="POST" class="inline-block ml-3">
+                                <a href="{{ route('interactions.edit', $interaction->id) }}"
+                                    class="editButton ml-3">Edit</a>
+                                <form action="{{ route('interactions.destroy', $interaction->id) }}"
+                                    onsubmit="return confirm('Are you sure you want to delete this interaction?');"
+                                    method="POST" class="inline-block ml-3">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="deleteButton">Delete</button>

@@ -20,6 +20,6 @@ class SupportMiddleware
             return $next($request);
         }
 
-        return redirect('/dashboard')->with('error', 'Unauthorized access');
+        return redirect('/home')->with('error', 'Unauthorized access');
     }
 }

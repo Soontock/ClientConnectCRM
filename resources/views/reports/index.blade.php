@@ -15,13 +15,13 @@
 
             <form action="/reports/tickets/pdf" method="GET">
                 <label>Tickets data</label>
-            
+
                 <label for="start_date">Start Date:</label>
                 <input type="date" name="start_date">
-            
+
                 <label for="end_date">End Date:</label>
                 <input type="date" name="end_date">
-            
+
                 <label for="status">Status:</label>
                 <select name="status">
                     <option value="">All</option>
@@ -30,10 +30,10 @@
                     <option value="resolved">Resolved</option>
                     <option value="closed">Closed</option>
                 </select>
-            
+
                 <button class="generateButton" type="submit">Generate Ticket PDF</button>
             </form>
-            
+
 
             <div class="dashed-line"></div>
 
@@ -49,4 +49,3 @@
             </div>
         </div>
     </x-app-layout>
-

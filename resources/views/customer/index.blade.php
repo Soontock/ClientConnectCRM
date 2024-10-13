@@ -11,7 +11,8 @@
         <div class="customerIndexForm-container">
             <form action="{{ route('customer.index') }}" method="GET" class="w-2/5">
                 <div class="flex">
-                    <input type="text" name="query" placeholder="Search by name..." class="search-input" value="{{ request()->input('query') }}">
+                    <input type="text" name="query" placeholder="Search by name..." class="search-input"
+                        value="{{ request()->input('query') }}">
                     <button type="submit" class="search-button">Search</button>
 
                     <a href="{{ route('customer.index') }}" class="clear-button">
@@ -19,7 +20,7 @@
                     </a>
                 </div>
             </form>
-        
+
             <a href="{{ route('customer.create') }}" class="add-button">
                 Add New Customer
             </a>
@@ -42,9 +43,12 @@
                             <td>{{ $customer->email }}</td>
                             <td>{{ $customer->phoneNum }}</td>
                             <td>
-                                <a href="{{ route('customer.show', $customer->id) }}" class="text-blue-500 hover:text-blue-700">View</a>
+                                <a href="{{ route('customer.show', $customer->id) }}"
+                                    class="text-blue-500 hover:text-blue-700">View</a>
                                 <a href="{{ route('customer.edit', $customer->id) }}" class="editButton ml-3">Edit</a>
-                                <form action="{{ route('customer.destroy', $customer->id) }}" method="POST" class="inline-block ml-3" onsubmit="return confirm('Are you sure you want to delete this customer?');">
+                                <form action="{{ route('customer.destroy', $customer->id) }}" method="POST"
+                                    class="inline-block ml-3"
+                                    onsubmit="return confirm('Are you sure you want to delete this customer?');">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="deleteButton">Delete</button>

@@ -1,0 +1,17 @@
+installation step
+
+git clone
+cd clientconnectcrm
+composer install
+cp .env.example .env
+inside the .env, set the database
+php artisan migrate
+npm install
+npm run dev
+php artisan serve
+
+i have use laravel breeze,laravel excel, dompdf in this laravel project.
+
+The usage of laravel breeze is to create user login and register function.
+The usage of laravel excel is to enable the function of downloading csv file.
+The usage of dompdf is to enable the function of downloading pdf file.

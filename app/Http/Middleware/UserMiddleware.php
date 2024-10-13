@@ -19,6 +19,6 @@ class UserMiddleware
         if (auth()->check() && auth()->user()->userType === 'user') {
             return $next($request);
         }
-        return redirect('/dashboard')->with('error', 'Unauthorized access');
+        return redirect('/home')->with('error', 'Unauthorized access');
     }
 }

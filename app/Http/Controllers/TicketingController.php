@@ -11,25 +11,25 @@ use Illuminate\Http\Request;
 class TicketingController extends Controller
 {
     public function index(Request $request)
-{
-    $query = $request->input('query');
-    $status = $request->input('status');
-    $priority = $request->input('priority');
-    $users = User::all();
+    {
+        $query = $request->input('query');
+        $status = $request->input('status');
+        $priority = $request->input('priority');
+        $users = User::all();
 
-    $tickets = Ticket::with('assignments.user')
-        ->when($query, function($queryBuilder) use ($query) {
-            return $queryBuilder->where('title', 'LIKE', "%{$query}%");
-        })
-        ->when($status, function($queryBuilder) use ($status) {
-            return $queryBuilder->where('status', $status);
-        })
-        ->when($priority, function($queryBuilder) use ($priority) {
-            return $queryBuilder->where('priority', $priority);
-        })
-        ->paginate(10);
-    return view('tickets.index', compact('tickets', 'users'));
-}
+        $tickets = Ticket::with('assignments.user')
+            ->when($query, function ($queryBuilder) use ($query) {
+                return $queryBuilder->where('title', 'LIKE', "%{$query}%");
+            })
+            ->when($status, function ($queryBuilder) use ($status) {
+                return $queryBuilder->where('status', $status);
+            })
+            ->when($priority, function ($queryBuilder) use ($priority) {
+                return $queryBuilder->where('priority', $priority);
+            })
+            ->paginate(10);
+        return view('tickets.index', compact('tickets', 'users'));
+    }
 
 
 
