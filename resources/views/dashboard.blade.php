@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container dashboardContainer mt-5" style="max-width: 60%; width: 100%;">
+    <div class="dashboardContainer" >
         <div class="titleDashboard">
             <h1 class="text-2xl font-semibold mb-4">Dashboard</h1>
 
@@ -51,7 +51,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+          
                 <div class="card dashboardCard">
                     <div class="card-header">
                         Active Tickets by Status
@@ -60,9 +60,7 @@
                         <canvas class="ticketStatusChart" id="ticketsStatusChart"></canvas>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-6">
+           
                
                 <div class="card dashboardCard">
                     <div class="card-header">
@@ -91,7 +89,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            
             
         </div>
     </div>
@@ -172,92 +170,6 @@
     @endpush
 
     <style>
-        :root {
-            --text-color: #000;
-            --input-background: #fff;
-            --input-text: #000;
-            --input-border: #ccc;
-            --button-primary-bg: #007bff;
-            --button-secondary-bg: #6c757d;
-        }
-
-        /* Dark mode variables */
-        @media (prefers-color-scheme: dark) {
-            :root {
-               
-                --text-color: #fff;
-                --input-background: #333;
-                --input-text: #fff;
-                --input-border: #555;
-                --button-primary-bg: #0d6efd;
-                --button-secondary-bg: #adb5bd;
-            }
-        }
-
-        .titleDashboard{
-            font-weight: bold;
-        }
-
-        .card-customer{
-            font-size: 60px;
-        }
-
-        .ticketStatusChart {
-            background-color: transparent; 
-            border: 2px solid black;
-        }
-
-        .card {
-            background-color: #fff;
-            color: black; 
-            margin-bottom: 20px;
-            
-        }
-
-        .dashboardCard {
-            height: auto; 
-            transition: border 0.3s, box-shadow 0.3s;
-            min-width:250px;
-            margin-right:2rem;
-        }
-
-        .dashboardCard:hover {
-            border: 2px solid #007bff; 
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5); 
-        }
-
-        .dashboardContainer {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 60%; 
-            margin: auto; 
-        }
-
-        .list-group-item{
-            border-bottom: 1px solid black;
-            font-size: 25px;
-        }
-
-        .card-header {
-            background-color: rgb(122, 122, 160); 
-            color: white;
-            font-size:30px;
-            border:1px solid black;
-            border-bottom:0px;
-        }
-
-        .activeTicketTable {
-            width: 50px;
-        }
-
-        .activeTicketTable th {
-            background-color: rgb(122, 122, 160); 
-            color: white;
-            padding: 5px;
-            border:1px solid black;
-        }
 
         .text-ellipsis {
             overflow: hidden;     
@@ -267,20 +179,5 @@
             max-width:150px;    
         }
 
-        .activeTicketTable td {
-            height: 50px;
-            vertical-align: middle; 
-            border:1px solid black;
-            padding:5px;
-        }
-
-        .activeTicketTable tbody tr:hover {
-            background-color: rgba(255, 255, 255, 0.2); 
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap; 
-        }
     </style>
 </x-app-layout>

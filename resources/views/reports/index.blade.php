@@ -1,6 +1,6 @@
     <x-app-layout>
-        <div class="form-container">
-            <h1>Generate Reports</h1>
+        <div class="report-container">
+            <h1 class="text-2xl font-semibold mb-4">Generate Reports</h1>
             <form action="/reports/customers/pdf" method="GET">
                 <label>Customers data</label>
 
@@ -48,85 +48,5 @@
                 </form>
             </div>
         </div>
-
-        <style>
-            h1 {
-                text-align: center;
-                color: #333;
-                font-weight: bold;
-                font-size: 25px;
-                margin-bottom: 10px;
-            }
-
-            .form-container {
-                max-width: 600px;
-                margin: 20px auto;
-                background-color: #ffffff;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-    
-            form {
-                margin-bottom: 20px;
-            }
-    
-            label {
-                display: block;
-                margin-bottom: 5px;
-                font-weight: bold;
-            }
-    
-            input[type="date"] {
-                padding: 8px;
-                margin-bottom: 10px;
-                width: calc(50% - 10px);
-                margin-right: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-    
-            .generateButton {
-                background-color: #5fa0e6;
-                color: white;
-                padding: 10px 10px;
-                border: 1px solid;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s;
-                display: block;
-                margin-top: 10px; 
-            }
-    
-            .generateButton:hover {
-                background-color: #0056b3;
-            }
-    
-            .excelButtonGreen {
-                color: white;
-                padding: 10px 10px;
-                border: 1px solid;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s;
-                background-color: #28a745;
-                margin-right: 10px;
-            }
-    
-            .excelButtonGreen:hover {
-                background-color: #218838;
-            }
-    
-            .excelButton {
-                display: flex;
-                gap: 10px; 
-                margin-top: 10px;
-            }
-    
-            .dashed-line {
-                border-top: 2px dashed #ccc;
-                margin: 20px 0;
-            }
-        </style>
     </x-app-layout>
 
