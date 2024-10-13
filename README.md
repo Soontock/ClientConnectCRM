@@ -49,6 +49,27 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
 
+
+## Installation
+installation step
+
+git clone
+cd clientconnectcrm
+composer install
+cp .env.example .env
+inside the .env, set the database
+php artisan migrate
+npm install
+npm run dev
+php artisan serve
+
+i have use laravel breeze,laravel excel, dompdf in this laravel project.
+
+The usage of laravel breeze is to create user login and register function.
+The usage of laravel excel is to enable the function of downloading csv file.
+The usage of dompdf is to enable the function of downloading pdf file.
+
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
