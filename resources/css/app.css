@@ -264,7 +264,7 @@
     }
 
     .dashboardContainer {
-        @apply p-5 rounded-lg w-4/6 mx-auto mt-5;
+        @apply rounded-lg w-4/6 mx-auto mt-5;
         color: var(--text-color);
     }
 
@@ -285,7 +285,7 @@
     }
 
     .dashboardCard {
-        @apply h-auto transition-all duration-300 min-w-[20%] mr-8;
+        @apply h-auto transition-all duration-300 min-w-[20%];
     }
 
     .dashboardCard:hover {
@@ -317,7 +317,7 @@
     }
 
     .row {
-        @apply flex flex-wrap;
+        @apply flex flex-wrap flex-1 justify-around;
     }
 
     .editUser-control {
